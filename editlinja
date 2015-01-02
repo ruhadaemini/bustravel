@@ -1,0 +1,52 @@
+<script type="text/javascript">
+function validate(){
+	if (document.forma.qyteti1.value == '') {
+		document.getElementById('message1').innerHTML=" *Shkruaj emrin e qytetit!"; 
+		return false;
+	}
+	if (document.forma.qyteti2.value == '') {
+		document.getElementById('message2').innerHTML=" *Shkruaj emrin e qytetit!"; 
+		return false;
+	}
+	if (document.forma.ora.value == '') {
+		document.getElementById('oramessage').innerHTML=" *Shkruaj kohen!"; 
+		return false;
+	}
+}
+</script>
+
+<?php include 'header.php' ?>
+<?php 
+include 'dbconnect.php'; 
+	if(isset($_POST['l_id']) && isset($_POST['qyteti1']) && isset($_POST['qyteti2']) && isset($_POST['ora'])){
+		$l_id= $_POST['l_id'];
+		$qyteti1= $_POST['qyteti1'];
+		$qyteti2= $_POST['qyteti2'];
+		$ora  = $_POST['ora'];
+		$query=mysql_query("UPDATE linjat SET qyteti1='$qyteti1', qyteti2='$qyteti2', ora='$ora' where l_id='$l_id'");
+			if($query){
+				header('location:readlinja.php');
+				}
+		}
+		else{
+		$l_id=$_GET['l_id'];
+		$query3=mysql_fetch_array(mysql_query("SELECT * from linjat where l_id='$l_id'"));
+?>
+
+	<form id="forma" name="forma" action='editlinja.php' method="POST" id="forma" onSubmit="return validate();">
+		<label> Nisja nga: </label>
+		<input type="hidden" name="l_id" value="<?php echo $query3['l_id']; ?>" />
+		<input type="text" id="demo" name="qyteti1" value="<?php echo $query3['qyteti1']; ?>" onblur="validate()" /> <span id="message1" style="color:red"></span>
+		<br />
+		<label> Deri ne: </label>
+		<input type="text" id="demo" name="qyteti2" value="<?php echo $query3['qyteti2']; ?>" onblur="validate()" /> <span id="message2" style="color:red"></span>
+		<br />
+		<label> Koha e nisjes: </label>
+		<input type="time" id="demo" name="ora" value="<?php echo $query3['ora']; ?>" onblur="validate()" /> <span id="oramessage" style="color:red"></span>
+		<br />
+		<input type="submit" name="submit" value="Edito" id="submit" />
+	</form>
+
+<?php
+	}
+?>	
