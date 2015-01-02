@@ -1,0 +1,33 @@
+<script type="text/javascript">
+function validate(){
+	if (document.forma.q_emri.value == '') {
+		document.getElementById('message').innerHTML=" *Shkruaj emrin e qytetit!"; 
+		return false;
+	}
+}
+</script>
+
+<?php include'header.php' ?>
+<?php
+	include 'dbconnect.php';
+	if( isset($_POST['create'])):
+		$q_emri = $_POST['q_emri'];
+		$query=mysql_query("INSERT INTO qytetet(q_emri) VALUES('$q_emri')")
+		or die(mysql_error());
+		//echo "<div class='alert alert-info'> E dhena u ruajt me sukses. </div>";
+		if($query){
+			header('location:readqytetet.php');
+		}
+	endif;	
+?>
+
+	<form id="forma" action="addqyteti.php" method="POST" name="forma" onSubmit="return validate();">
+		<label> Emri i Qytetit : </label>
+		<input type="text" id="demo" name="q_emri" class="input" onblur="validate()"/> <span id="message" style="color:red"></span>
+		      
+		</br>
+	</br>
+		<input type="submit" name="create" value="Shto qytet te ri" id="submit" /> 
+	</form>
+	</br>
+</br>
