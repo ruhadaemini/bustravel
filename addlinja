@@ -1,0 +1,50 @@
+<script type="text/javascript">
+function validate(){
+	if (document.forma.qyteti1.value == '') {
+		document.getElementById('message1').innerHTML=" *Shkruaj emrin e qytetit!"; 
+		return false;
+	}
+	if (document.forma.qyteti2.value == '') {
+		document.getElementById('message2').innerHTML=" *Shkruaj emrin e qytetit!"; 
+		return false;
+	}
+	if (document.forma.ora.value == '') {
+		document.getElementById('oramessage').innerHTML=" *Shkruaj kohen!"; 
+		return false;
+	}
+}
+</script>
+
+<?php include'header.php' ?>
+<?php
+	include 'dbconnect.php';
+	if( isset($_POST['create'])):
+		$qyteti1 = $_POST['qyteti1'];
+		$qyteti2 = $_POST['qyteti2'];
+		$ora = $_POST['ora'];
+		//edhe qetu duhet me shtu edhe emrin e agjensionit 
+		$query=mysql_query("INSERT INTO linjat(qyteti1, qyteti2,ora) VALUES('$qyteti1', '$qyteti2','$ora')")
+		or die(mysql_error());
+		
+		//echo "<div class='alert alert-info'> E dhena u ruajt me sukses. </div>";
+		if($query){
+			header('location:readlinja.php');
+		}
+	endif;	
+?>
+	<form id="forma" action="addlinja.php" method="POST" name="forma" onSubmit="return validate();">
+		<label> Nisja nga: </label>
+		<input type="text" id="demo" name="qyteti1" class="input" onblur="validate()"/> <span id="message1" style="color:red"></span>
+		
+		<label> Destinacioni : </label>
+		<input type="text" id="demo" name="qyteti2" class="input" onblur="validate()"/> <span id="message2" style="color:red"></span>
+
+		<label> Koha e nisjes : </label>
+		<input type="time" id="demo" name="ora" class="input" onblur="validate()"/> <span id="oramessage" style="color:red"></span>
+
+		</br>
+	</br>
+		<input type="submit" name="create" value="Krijo Linjen" id="submit" /> 
+	</form>
+	</br>
+</br>
