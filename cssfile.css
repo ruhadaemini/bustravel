@@ -1,0 +1,172 @@
+#page {
+width : 960px;
+height : auto;
+background-color : white;
+margin : auto;
+}
+#header{
+    width:960px;
+    height: 100px;
+    background-color: #e8e5e3;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #f06d1e;
+}
+#logo{
+	float:left;
+	
+}
+#menu {
+width : 658px;
+height : 60px;
+float :right;
+display : inline;
+margin-top: -70px;
+margin-left: 30px;
+}
+#menu ul {
+width : 650px;
+float : right;
+list-style-type : none;
+font-family : Arial Narrow, sans-serif;
+color : #5d5552;
+font-size : 22px;
+display : block;
+padding-top : 0px;
+margin-left: 20px;
+text-decoration: none;
+
+}
+#menu ul:before {
+content : '';
+display : block;
+}
+#menu ul:after {
+content : '';
+display : table;
+clear : both;
+}
+#menu li {
+display : block;
+float : left;
+margin-left : 20px;
+padding-right : 0;
+}
+#menu li a {
+display : block;
+float : right;
+color : #5d5552;
+text-decoration : none;
+padding-right : 60px;
+padding-bottom : 20px;
+padding-left : 0;
+
+}
+#menu li a:hover {
+color : #f06d1e;
+}
+
+p{
+	color:#102a43;
+	margin-top: 200px;
+	padding-top: 500px;
+}
+#shtoqytet{
+	height:500px;
+	width: 100%;
+	background-color: white;
+	border-bottom:2px solid #214655; 
+}
+#shtoqytet, h1{
+	color:#214655;
+	font-style: ;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+#forma {
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 18px;
+  font-color: #214655;
+  padding: 15px;
+  width: 860px;
+}
+#forma label {
+  display: block;
+  margin-bottom: 12px;
+}
+#forma input[type="text"] {
+  font-size: 16px;
+  padding: 4px;
+  width: 392px;
+}
+#name {
+  margin-left: 60px;
+  color:#214655;
+}
+#submit {
+  float: left;
+  margin-left:330px; 
+  background-color: #5d5552;
+  font-family: Arial Narrow, sans-serif;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  border: 2px outset #f06d1e;
+  border-radius: 7px;
+}
+#submit:hover {
+  color:#f06d1e;
+}
+#shtobuton{
+	margin:20px;
+	float: left; 
+  	background-color: #214655;
+  	font-family: Arial Narrow, sans-serif;
+  	font-size: 20px;
+  	color: white;
+  	cursor: pointer;
+  	border: 2px outset #214655;
+  	border-radius: 7px;
+  	padding-top: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	height: 40px;
+	text-decoration : none;
+}
+th {
+    font-family: Arial Narrow, sans-serif;
+    background-color:#5d5552;
+        color:white;
+}
+table{
+  font-family: Arial Narrow, sans-serif;
+  margin-top: 80px;
+}
+table, td, th {
+  font-family: Arial Narrow, sans-serif;
+    border: 1px solid #5d5552;
+
+}
+
+table th a{
+  text-decoration: none;
+  color: white;
+  margin: 2px;
+  float:right;
+}
+
+table th a:hover{
+  color: #f06d1e;
+}
+
+table td a{
+  text-decoration: none;
+  color: black;
+  margin: 2px;
+  float:right;
+}
+label{
+  font-family: Arial Narrow, sans-serif;
+}
+table td a:hover{color: #214655;}
