@@ -16,7 +16,7 @@
             <div id="logo">
                 <img src="images/logoo.png" alt="logo">
             </div>
-            
+            <!-- Start of menu -->
             <div id="menu">
                 <ul>
                     <li><a href='ballina.php'><img src='images/home.png'><span>Ballina</span></a></li>
