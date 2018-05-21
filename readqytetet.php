@@ -22,7 +22,7 @@
 				echo "<td>" .$q_id. "</td>";
 				echo "<td>" .$q_emri. "</td>";
 				echo "<td><a href='fshijqytete.php?q_id=".$q_id."'><img src='images/delete.png'> Fshij</a></td>";
-				echo "<td><a href='editqyteti.php?q_id=".$q_id."'><img src='images/edit.png'> Edit</a></td>";
+				echo "<td><a href='editqyteti.php?q_id=".$q_id."'><img src='images/edit.png'> Ndrysho</a></td>";
 			}
 			echo "</table>";
 		}	
