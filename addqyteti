@@ -27,7 +27,7 @@ function validate(){
 		      
 		</br>
 	</br>
-		<input type="submit" name="create" value="Shto qytet te ri" id="submit" /> 
+		<input type="submit" name="create" value="Shto Qytet te ri" id="submit" /> 
 	</form>
 	</br>
 </br>
