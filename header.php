@@ -20,9 +20,9 @@
             <div id="menu">
                 <ul>
                     <li><a href='ballina.php'><img src='images/home.png'><span>Home</span></a></li>
-                    <li><a href='readqytetet.php'><img src='images/qytete.png'><span>Qytetet</span></a></li>
-                    <li><a href='readagjensionet.php'><img src='images/bus.png'><span>Agjensionet</span></a></li>
-                    <li><a href='readlinja.php'><img src='images/linja.png'><span>Linjat</span></a></li>
+                    <li><a href='readqytetet.php'><img src='images/qytete.png'><span>Cities</span></a></li>
+                    <li><a href='readagjensionet.php'><img src='images/bus.png'><span>Agencies</span></a></li>
+                    <li><a href='readlinja.php'><img src='images/linja.png'><span>Bus Lines</span></a></li>
                 </ul>
             </div>   
         </div>
