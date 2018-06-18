@@ -33,7 +33,7 @@ function validate(){
 	endif;	
 ?>
 	<form id="forma" action="addlinja.php" method="POST" name="forma" onSubmit="return validate();">
-		<label> Nisja nga: </label>
+		<label> Nisja nga qyetit: </label>
 		<input type="text" id="demo" name="qyteti1" class="input" onblur="validate()"/> <span id="message1" style="color:red"></span>
 		
 		<label> Pershkrimi : </label>
