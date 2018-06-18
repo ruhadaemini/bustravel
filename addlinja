@@ -36,7 +36,7 @@ function validate(){
 		<label> Nisja nga qyetit: </label>
 		<input type="text" id="demo" name="qyteti1" class="input" onblur="validate()"/> <span id="message1" style="color:red"></span>
 		
-		<label> Pershkrimi : </label>
+		<label> Pershkrimi i linjes: </label>
 		<input type="text" id="demo" name="qyteti2" class="input" onblur="validate()"/> <span id="message2" style="color:red"></span>
 
 		<label> Koha e nisjes : </label>
