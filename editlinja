@@ -38,7 +38,7 @@ include 'dbconnect.php';
 		<input type="hidden" name="l_id" value="<?php echo $query3['l_id']; ?>" />
 		<input type="text" id="demo" name="qyteti1" value="<?php echo $query3['qyteti1']; ?>" onblur="validate()" /> <span id="message1" style="color:red"></span>
 		<br />
-		<label> Deri ne: </label>
+		<label> Deri ne qytetin: </label>
 		<input type="text" id="demo" name="qyteti2" value="<?php echo $query3['qyteti2']; ?>" onblur="validate()" /> <span id="message2" style="color:red"></span>
 		<br />
 		<label> Koha e nisjes: </label>
