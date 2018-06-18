@@ -34,7 +34,7 @@ include 'dbconnect.php';
 ?>
 
 	<form id="forma" name="forma" action='editlinja.php' method="POST" id="forma" onSubmit="return validate();">
-		<label> Nisja nga: </label>
+		<label> Nisja nga qyteti: </label>
 		<input type="hidden" name="l_id" value="<?php echo $query3['l_id']; ?>" />
 		<input type="text" id="demo" name="qyteti1" value="<?php echo $query3['qyteti1']; ?>" onblur="validate()" /> <span id="message1" style="color:red"></span>
 		<br />
