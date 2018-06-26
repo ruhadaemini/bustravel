@@ -24,7 +24,7 @@ include 'dbconnect.php';
 		$query3=mysql_fetch_array(mysql_query("SELECT * from qytetet where q_id='$q_id'"));
 ?>
 	<form id="forma" name="forma" action="editqyteti.php" method="POST" id="forma" onSubmit="return validate();">
-		<label> Emri i Qytetit : </label>
+		<label> Qyteti  : </label>
 		<input type="hidden" name="q_id" value="<?php echo $query3['q_id']; ?>" />
 		<input type="text" id="demo" name="q_emri" value="<?php echo $query3['q_emri']; ?>" onblur="validate()" /> <span id="message" style="color:red"></span>
 		<br />
