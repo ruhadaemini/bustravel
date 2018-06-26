@@ -29,7 +29,7 @@ include 'dbconnect.php';
 		<input type="text" id="demo" name="q_emri" value="<?php echo $query3['q_emri']; ?>" onblur="validate()" /> <span id="message" style="color:red"></span>
 		<br />
 		<br />
-		<input type="submit" name="submit" value="Update" id="submit" />
+		<input type="submit" name="submit" value="Save" id="submit" />
 	</form>
 <?php
 	}
